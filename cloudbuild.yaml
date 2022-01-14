@@ -1,6 +1,6 @@
 steps:
-- name: python
-    entrypoint: pip
+- name: "gcr.io/cloud-builders/python"
+    entrypoint: "pip"
     args: ["install", "-r", "req_flask_app.txt", "--user"]
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
