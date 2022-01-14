@@ -2,6 +2,6 @@ steps:
 - name: python
   entrypoint: pip
   args: ["install", "-r", "req_flask_app.txt", "--user"]
-- name: "gcr.io/cloud-builders/gcloud"
-  args: ["app", "deploy"]
+- name: python
+  args: ["main.py"]
 timeout: "1600s"
