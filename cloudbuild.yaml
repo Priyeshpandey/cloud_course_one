@@ -1,7 +1,6 @@
 steps:
-- name: "gcr.io/cloud-builders/python"
-    entrypoint: "pip"
-    args: ["install", "-r", "req_flask_app.txt", "--user"]
+- name: "make"
+  args: ["install_flask_app""]
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
 timeout: "1600s"
